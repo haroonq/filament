@@ -1,4 +1,9 @@
 cmake_minimum_required(VERSION 3.19)
+
+if (TARGET benchmark)
+  return()
+endif()
+
 project(benchmark)
 
 set(OUR_DIR ${CMAKE_CURRENT_SOURCE_DIR}/..)

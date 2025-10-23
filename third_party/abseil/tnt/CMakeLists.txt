@@ -1,5 +1,9 @@
 option(FILAMENT_USE_EXTERNAL_ABSL "Use find_package to locate an external Abseil dependency" OFF)
 
+if (TARGET absl::core_headers)
+  return()
+endif()
+
 if (FILAMENT_USE_EXTERNAL_ABSL)
   find_package(absl CONFIG QUIET)
 else()

@@ -1,4 +1,9 @@
 cmake_minimum_required(VERSION 3.19)
+
+if (TARGET gtest)
+  return()
+endif()
+
 project(gtest)
 
 set(OUR_DIR ${CMAKE_CURRENT_SOURCE_DIR}/..)
